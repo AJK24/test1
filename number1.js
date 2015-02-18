@@ -4,21 +4,21 @@
 //Feb 2015
 //1. (4 points) Write a program that declares a variable, assigns it a value, and then somehow changes it by using one of the basic control structures. Be sure to print the result.
 
-
+//changer is global variable
 var changer = 42;
 
-//a multiplier function
-function multiplier(number, multiplier){ //sends the number and the multiplier
-	if(multiplier > 10){		//if multiplier is greater than 10
-		multiplier = multiplier/2;	//divide it in half
-		console.log(multiplier);	//print multiplier in this case
+
+//a function that multiplies the 2 numbers
+function multiplier(number, multiplier){
+	if(multiplier > 10){ //divides the multiplier by 2 if its greater than 10
+		multiplier = multiplier/2;
+		console.log(multiplier);	//prints it
 	}
-	else{	//if multiplier not greater than 10 divide number by 2.
+	else{	//otherwise divides number by 2 and prints it
 		number = number/2;
-		console.log(number);	//print number
+		console.log(number);
 	}
-return number*multiplier;	//returns the number mulitplied.
+return number*multiplier;
 }
 
-//runs and prints the answer
 console.log(multiplier(changer, 12));
